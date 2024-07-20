@@ -1,0 +1,348 @@
+﻿<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Server Old School</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+
+        * {
+            font-family: Roboto,Alex Brush,sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            background-color: #080710;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .continer{
+            position: relative;
+            width: 1200px;
+        }
+        .continer_main{
+            width: 100%;
+            height: 100%;
+            margin: auto auto;
+            background-color: rgba(255,255,255,0.13);
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 50px 35px 40px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.13);
+        }
+
+        .main_text {
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #d7d7d7;
+            margin-bottom: 20px;
+        }
+        .wel{
+            font-family: Roboto;
+            text-align: left;
+            font-size: 20px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .ol{
+            font-family: "Alex Brush";
+            display: block;
+            text-align: center;
+            font-size: 90px;
+        }
+        .line {
+            height: 6px;
+            width: 100%;
+            background-color: #d6d6d6;
+            border-radius: 10px;
+        }
+
+        .linksv {
+            margin-bottom: 40px;
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+        }
+        .btn_s1{
+            font-size: 20px;
+            margin: auto;
+            border: none;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            color: #080710;
+            background-color: #03A9F4;
+            height: 50px;
+            border-radius: 10px;
+            width: 275px;
+            text-decoration: none;
+        }
+        .icon{
+            width: 40px;
+        }
+        .btn_s2{
+            font-size: 20px;
+            margin: auto;
+            border: none;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            color: #080710;
+            background-color: #03A9F4;
+            height: 50px;
+            border-radius: 10px;
+            width: 275px;
+            text-decoration: none;
+
+        }
+        button {
+            z-index: 1;
+            position: relative;
+            font-size: inherit;
+            outline: none;
+            border: none;
+            background-color: hsl(236, 32%, 26%);
+            overflow: hidden;
+            transition: color 0.4s ease-in-out;
+        }
+
+
+        .btn_ts{
+            z-index: 1;
+            position: relative;
+            transition: color 0.4s ease-in-out;
+            margin: auto;
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            background-color: #03A9F4;
+            height: 50px;
+            border-radius: 10px;
+            width: 275px;
+            justify-content: center;
+
+        }
+        .btn_ts a{
+            gap: 10px;
+            color: #080710;
+            text-decoration: none;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .eff::before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2em;
+            height: 2em;
+            border-radius: 50%;
+            background-color: #85dbff;
+            transform-origin: center;
+            transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+            transition: transform 0.45s ease-in-out;
+        }
+
+        .eff:hover {
+            cursor: pointer;
+            color: #161616;
+        }
+
+        .eff:hover::before {
+            transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+        }
+
+        .btn_ts svg {
+            width: 40px;
+        }
+        .tlico {
+            border-radius: 100%;
+        }
+        .info{
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tl{
+            color: #42A5F5;
+            border-radius: 20px;
+            padding: 10px;
+            gap: 10px;
+            width: fit-content;
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+        .shape{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            border-radius: 100%;
+        }
+        .one{
+            background-image: linear-gradient(45deg, #E65100, #FFA726);
+            bottom: -90px;
+            right: -40px;
+            z-index: -1;
+        }
+        .two{
+            background-image: linear-gradient(#0D47A1, #42A5F5);
+            top: -80px;
+            left: -80px;
+            z-index: -1;
+        }
+        .three{
+            width: 150px;
+            height: 150px;
+            background-image: linear-gradient(#F44336, #B71C1C);
+            top: -10px;
+            left: 450px;
+            z-index: -1;
+        }
+        .four {
+            width: 150px;
+            height: 150px;
+            background-image: linear-gradient(#00838F, #26C6DA);
+            top: 300px;
+            left: 250px;
+            z-index: -1;
+        }
+        .five{
+            width: 150px;
+            height: 150px;
+            background-image: linear-gradient(#AD1457, #F06292);
+            top: 100px;
+            left: 950px;
+            z-index: -1;
+        }
+
+    </style>
+
+    <script >
+        function myFunction1() {
+            navigator.clipboard.writeText("connect 80.71.149.5:24000");
+            alert("Copied the text, Paste to console");
+        }
+        function myFunction2() {
+            navigator.clipboard.writeText("connect 80.71.149.5:33000");
+            alert("Copied the text, Paste to console");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="continer">
+        <div class="continer_main">
+        <div class="main_text">
+            <span class="wel">Welcome To </span>
+            <span class="ol">OldSchooL</span>
+        </div>
+        <div class="line">
+
+        </div>
+        <div class="linksv">
+            <button class="btn_s1 eff" onclick="myFunction1()">
+                <span>Connect To Server 1</span>
+                <svg class="icon" fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 0 316.89 316.89" xml:space="preserve">
+                <g>
+                    <path d="M182.47,212.195c0-0.754,0.036-1.5,0.057-2.25H38.5c-21.229,0-38.5,17.271-38.5,38.5s17.271,38.5,38.5,38.5h199.493
+                        C205.905,277.24,182.47,247.408,182.47,212.195z M81.5,258.445h-35c-5.514,0-10-4.486-10-10c0-5.514,4.486-10,10-10h35
+                        c5.514,0,10,4.486,10,10C91.5,253.959,87.014,258.445,81.5,258.445z"/>
+                    <path d="M38.5,196.945h145.476c7.114-35.78,38.743-62.837,76.581-62.837c9.54,0,18.682,1.727,27.139,4.872
+                        c-6.697-11.378-19.066-19.035-33.196-19.035h-216c-21.229,0-38.5,17.271-38.5,38.5S17.271,196.945,38.5,196.945z M46.5,148.445h35
+                        c5.514,0,10,4.486,10,10c0,5.514-4.486,10-10,10h-35c-5.514,0-10-4.486-10-10C36.5,152.931,40.986,148.445,46.5,148.445z"/>
+                    <path d="M38.5,106.945h216c21.228,0,38.5-17.271,38.5-38.5s-17.272-38.5-38.5-38.5h-216c-21.229,0-38.5,17.271-38.5,38.5
+                        S17.271,106.945,38.5,106.945z M237.5,55.695c7.03,0,12.75,5.72,12.75,12.75s-5.72,12.75-12.75,12.75
+                        c-7.03,0-12.75-5.72-12.75-12.75S230.47,55.695,237.5,55.695z M46.5,58.445h35c5.514,0,10,4.486,10,10s-4.486,10-10,10h-35
+                        c-5.514,0-10-4.486-10-10S40.986,58.445,46.5,58.445z"/>
+                    <path d="M260.557,155.862c-31.112,0-56.333,25.221-56.333,56.333s25.221,56.333,56.333,56.333s56.332-25.221,56.332-56.333
+                        S291.669,155.862,260.557,155.862z M290.653,200.261l-35.654,35.653c-0.754,0.755-1.759,1.172-2.828,1.172
+                        c-1.069,0-2.074-0.416-2.829-1.172l-17.88-17.88c-0.756-0.755-1.172-1.76-1.172-2.828c0-1.068,0.416-2.073,1.172-2.829l3.535-3.535
+                        c0.754-0.755,1.759-1.172,2.828-1.172c1.068,0,2.073,0.416,2.828,1.171l11.518,11.517l29.291-29.289
+                        c0.754-0.755,1.759-1.172,2.828-1.172c1.069,0,2.074,0.417,2.829,1.172l3.535,3.535c0.755,0.754,1.172,1.759,1.172,2.828
+                        C291.825,198.501,291.409,199.506,290.653,200.261z"/>
+                </g>
+            </svg>
+            </button>
+            <button class="btn_s2 eff" onclick="myFunction2()">
+<!--               connect/80.71.149.5:24000 connect/80.71.149.5:33000-->
+                <span>Connect To Server 2</span>
+                <svg class="icon" fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 0 316.89 316.89" xml:space="preserve">
+                <g>
+                    <path d="M182.47,212.195c0-0.754,0.036-1.5,0.057-2.25H38.5c-21.229,0-38.5,17.271-38.5,38.5s17.271,38.5,38.5,38.5h199.493
+                        C205.905,277.24,182.47,247.408,182.47,212.195z M81.5,258.445h-35c-5.514,0-10-4.486-10-10c0-5.514,4.486-10,10-10h35
+                        c5.514,0,10,4.486,10,10C91.5,253.959,87.014,258.445,81.5,258.445z"/>
+                    <path d="M38.5,196.945h145.476c7.114-35.78,38.743-62.837,76.581-62.837c9.54,0,18.682,1.727,27.139,4.872
+                        c-6.697-11.378-19.066-19.035-33.196-19.035h-216c-21.229,0-38.5,17.271-38.5,38.5S17.271,196.945,38.5,196.945z M46.5,148.445h35
+                        c5.514,0,10,4.486,10,10c0,5.514-4.486,10-10,10h-35c-5.514,0-10-4.486-10-10C36.5,152.931,40.986,148.445,46.5,148.445z"/>
+                    <path d="M38.5,106.945h216c21.228,0,38.5-17.271,38.5-38.5s-17.272-38.5-38.5-38.5h-216c-21.229,0-38.5,17.271-38.5,38.5
+                        S17.271,106.945,38.5,106.945z M237.5,55.695c7.03,0,12.75,5.72,12.75,12.75s-5.72,12.75-12.75,12.75
+                        c-7.03,0-12.75-5.72-12.75-12.75S230.47,55.695,237.5,55.695z M46.5,58.445h35c5.514,0,10,4.486,10,10s-4.486,10-10,10h-35
+                        c-5.514,0-10-4.486-10-10S40.986,58.445,46.5,58.445z"/>
+                    <path d="M260.557,155.862c-31.112,0-56.333,25.221-56.333,56.333s25.221,56.333,56.333,56.333s56.332-25.221,56.332-56.333
+                        S291.669,155.862,260.557,155.862z M290.653,200.261l-35.654,35.653c-0.754,0.755-1.759,1.172-2.828,1.172
+                        c-1.069,0-2.074-0.416-2.829-1.172l-17.88-17.88c-0.756-0.755-1.172-1.76-1.172-2.828c0-1.068,0.416-2.073,1.172-2.829l3.535-3.535
+                        c0.754-0.755,1.759-1.172,2.828-1.172c1.068,0,2.073,0.416,2.828,1.171l11.518,11.517l29.291-29.289
+                        c0.754-0.755,1.759-1.172,2.828-1.172c1.069,0,2.074,0.417,2.829,1.172l3.535,3.535c0.755,0.754,1.172,1.759,1.172,2.828
+                        C291.825,198.501,291.409,199.506,290.653,200.261z"/>
+                </g>
+            </svg>
+            </button>
+            <button class="btn_ts eff">
+            <a href="ts3server://CSOldSchool.ir?">
+                <span>Join Server TeamSpeaks3</span>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                    <g fill="#000000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M20,2c-3.921,0 -7.73675,0.66647 -11.34375,1.98047c-0.041,0.015 -0.06942,0.04641 -0.10742,0.06641c-0.06,0.031 -0.11692,0.06152 -0.16992,0.10352c-0.049,0.04 -0.08695,0.08386 -0.12695,0.13086c-0.043,0.05 -0.08223,0.1002 -0.11523,0.1582c-0.033,0.059 -0.05422,0.11959 -0.07422,0.18359c-0.013,0.04 -0.03792,0.07128 -0.04492,0.11328l-2.24805,12.05273c-2.307,1.199 -3.76953,3.58094 -3.76953,6.21094c0,3.859 3.141,7 7,7c3.859,0 7,-3.141 7,-7c0,-2.289 -1.136,-4.43728 -3,-5.73828v-12.47656c2.274,-0.519 4.615,-0.78516 7,-0.78516c12.703,0 23,9.402 23,21c0,11.598 -10.297,21 -23,21c-3.077,0 -6.67409,-0.71978 -9.62109,-1.92578c-0.508,-0.207 -1.09569,0.03487 -1.30469,0.54688c-0.209,0.512 0.03587,1.09569 0.54688,1.30469c3.176,1.299 7.05591,2.07422 10.37891,2.07422c15.439,0 28,-10.317 28,-23c0,-12.683 -12.561,-23 -28,-23zM16.07031,5.99414c-0.23166,-0.01833 -0.47206,0.05822 -0.66406,0.19922c-0.256,0.188 -0.40625,0.48864 -0.40625,0.80664v9c0,0.352 0.18437,0.67742 0.48438,0.85742c0.045,0.028 4.51563,2.79358 4.51563,10.14258c0,6.543 -3.74325,11.827 -3.78125,11.875c-0.317,0.397 -0.28478,0.97108 0.07422,1.33008c0.216,0.216 0.95703,0.79492 3.70703,0.79492c3.317,0 3.99805,-1.136 3.99805,-3.375c0,-0.715 -0.09011,-1.18069 -0.16211,-1.55469c-0.051,-0.264 -0.0888,-0.45478 -0.0918,-0.67578c0.041,-0.119 0.359,-0.3558 0.625,-0.4668c0.313,-0.125 0.54042,-0.39852 0.60742,-0.72852c0.067,-0.33 -0.03448,-0.66925 -0.27148,-0.90625l-0.29297,-0.29297l0.29297,-0.29297c0.311,-0.31 0.38173,-0.78583 0.17773,-1.17383c-0.254,-0.481 -0.54447,-1.05136 -0.73047,-1.44336l1.98633,-1.03516c0.495,-0.256 0.81447,-0.73797 0.85547,-1.29297c0.025,-0.339 -0.05533,-0.66994 -0.23633,-0.96094c-0.491,-0.784 -1.35445,-1.84414 -2.18945,-2.86914c-0.567,-0.696 -1.15138,-1.41172 -1.48437,-1.88672c0.391,-0.56 0.91406,-1.35692 0.91406,-2.16992c0,-4.532 -2.37217,-11.75008 -7.70117,-13.83008c-0.0735,-0.02875 -0.14934,-0.04467 -0.22656,-0.05078zM20.73828,6c-0.238,-0.008 -0.35173,0.2755 -0.17773,0.4375c3.898,3.627 5.4375,9.6995 5.4375,13.4375c0,0.76 -0.225,1.4533 -0.5,2.0293c0.203,0.252 0.41614,0.51467 0.61914,0.76367c0.879,1.079 1.77798,2.18431 2.33398,3.07031c0.532,0.853 0.68692,1.86533 0.41992,2.86133c-0.267,0.998 -1.00492,1.80616 -1.91992,2.28516l-0.13867,0.07227c0.249,0.67 0.24762,1.39487 0.01563,2.04688c0.178,0.505 0.21942,1.05466 0.10742,1.59766c-0.14,0.683 -0.5073,1.28189 -1.0293,1.71289c0.05,0.349 0.0918,0.78055 0.0918,1.31055c0,1.203 -0.21081,2.20709 -0.63281,2.99609c-0.094,0.176 0.02466,0.40091 0.22266,0.37891c1.163,-0.125 3.04111,-0.85073 3.91211,-1.30273c5.672,-2.941 9.5,-8.42127 9.5,-14.69727c0,-9.175 -6.361,-17.12995 -15.625,-18.75195c-0.177,-0.031 -1.32472,-0.20205 -2.63672,-0.24805z"></path></g></g>
+                </svg>
+            </a>
+            </button>
+        </div>
+         <div class="line">
+         </div>
+        <div class="info">
+            <div class="tl">
+                <svg class="icon tlico" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 0 455.731 455.731" xml:space="preserve">
+                <g>
+                    <rect x="0" y="0" style="fill:#61A8DE;" width="455.731" height="455.731"/>
+                    <path style="fill:#FFFFFF;" d="M358.844,100.6L54.091,219.359c-9.871,3.847-9.273,18.012,0.888,21.012l77.441,22.868l28.901,91.706
+                        c3.019,9.579,15.158,12.483,22.185,5.308l40.039-40.882l78.56,57.665c9.614,7.057,23.306,1.814,25.747-9.859l52.031-248.76
+                        C382.431,106.232,370.443,96.08,358.844,100.6z M320.636,155.806L179.08,280.984c-1.411,1.248-2.309,2.975-2.519,4.847
+                        l-5.45,48.448c-0.178,1.58-2.389,1.789-2.861,0.271l-22.423-72.253c-1.027-3.308,0.312-6.892,3.255-8.717l167.163-103.676
+                        C320.089,147.518,324.025,152.81,320.636,155.806z"/>
+                </g>
+                </svg>
+                <span>@Mc_Qatea</span>
+            </div>
+        </div>
+        </div>
+        <div class="shape one"></div>
+        <div class="shape two"></div>
+        <div class="shape three"></div>
+        <div class="shape four"></div>
+        <div class="shape five"></div>
+    </div>
+</body>
+</html>
